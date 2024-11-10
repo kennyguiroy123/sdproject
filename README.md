@@ -22,11 +22,11 @@ A full-stack Task Management Dashboard built with Next.js, Tailwind CSS, Prisma,
 ## Installation
 
 1. Install Dependencies
-Run the following command to install all necessary dependencies:
+Run the following command to install the dependencies defined in your `package.json` file, including Next.js, Tailwind CSS, Prisma, and others:
 
-bash
-Copier le code
+```bash
 npm install
+```
 This will install dependencies defined in your package.json file, including Next.js, Tailwind CSS, Prisma, and others.
 
 2. Set up Environment Variables
@@ -65,11 +65,12 @@ npm run prisma:generate - Generate Prisma client to interact with your database.
 Postinstall Script for Prisma
 If you encounter issues where Prisma Client is not generated in production (e.g., on Vercel), add the following postinstall script in your package.json:
 
-json
+```json
 Copier le code
 "scripts": {
   "postinstall": "prisma generate"
 }
+```
 This will ensure Prisma is generated automatically after every install, including on Vercel deployments.
 
 Environment Variables
