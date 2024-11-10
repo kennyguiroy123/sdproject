@@ -1,6 +1,6 @@
 // TaskList.js
 import React from 'react';
-import TaskItem from './TaskItem';
+import TaskItem from './taskItem';
 
 const TaskList = ({ tasks, onEdit, onDelete, onSelect }) => {
   return (
