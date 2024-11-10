@@ -1,8 +1,8 @@
 // TaskPage.js
 import React, { useState, useEffect } from 'react';
 import Modal from '../components/modals';
-import TaskList from '../components/TaskList';
-import TaskForm from '../components/TaskForm';
+import TaskList from '../components/taskList';
+import TaskForm from '../components/taskForm';
 import DashboardLayout from '../components/mainDashboardLayout';
 
 const TaskPage = () => {
