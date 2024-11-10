@@ -63,20 +63,6 @@ npm run start - Start the project in production mode.
 npm run migrate:deploy - Apply Prisma migrations to the database.
 npm run prisma:generate - Generate Prisma client to interact with your database.
 Postinstall Script for Prisma
-If you encounter issues where Prisma Client is not generated in production (e.g., on Vercel), add the following postinstall script in your package.json:
-
-```json
-Copier le code
-"scripts": {
-  "postinstall": "prisma generate"
-}
-```
-This will ensure Prisma is generated automatically after every install, including on Vercel deployments.
-
-Environment Variables
-Variable	Description
-DATABASE_URL	PostgreSQL connection string (URL format)
-JWT_SECRET	Secret key for JWT token generation
 
 
 License
