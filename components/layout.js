@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import MobileNavBar from './MobileNavbar';
 import Sidebar from './sidebar';
-import { SunIcon, MoonIcon } from '@heroicons/react/outline';
 
 export default function Layout({ children }) {
   const router = useRouter();

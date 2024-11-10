@@ -120,7 +120,6 @@ const TaskPage = () => {
         body: JSON.stringify(taskData),
       });
   
-      const responseBody = await response.json();
     } else {
       // Create a new task (POST request)
       const response = await fetch('/api/tasks', {
@@ -131,7 +130,6 @@ const TaskPage = () => {
         body: JSON.stringify(taskData),
       });
   
-      const responseBody = await response.json();
     }
     fetchTasks();
     closeModal();
