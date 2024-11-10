@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 const TaskForm = ({ task, onSubmit, onClose }) => {
-  const [title, setTitle] = useState(task ? task.title : ''); // Use task title or empty string for new task
-  const [description, setDescription] = useState(task ? task.description : ''); // Use task description or empty string for new task
-  const [status, setStatus] = useState(task ? task.status : 'Incomplete'); // Use task status or 'Incomplete' for new task
+  const [title, setTitle] = useState(task ? task.title : ''); 
+  const [description, setDescription] = useState(task ? task.description : ''); 
+  const [status, setStatus] = useState(task ? task.status : 'Incomplete'); 
 
   useEffect(() => {
     if (task) {
@@ -23,10 +23,8 @@ const TaskForm = ({ task, onSubmit, onClose }) => {
     };
 
     if (task) {
-      // If we are editing, pass the task's ID and other fields (task.id will exist)
       onSubmit({ ...taskData, id: task.id });
     } else {
-      // If we are creating a new task, no ID is passed
       onSubmit(taskData);
     }
   };

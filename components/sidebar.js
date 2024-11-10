@@ -1,4 +1,3 @@
-// components/Sidebar.js
 import Link from 'next/link';
 import SignOutButton from './signoutBtn';
 

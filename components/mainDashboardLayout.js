@@ -1,4 +1,3 @@
-// components/DashboardLayout.js
 import { useState, useEffect } from 'react';
 import { SunIcon, MoonIcon } from '@heroicons/react/20/solid';
 import Sidebar from './sidebar';
@@ -6,7 +5,6 @@ import Sidebar from './sidebar';
 const DashboardLayout = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
 
-  // Load the theme from local storage if it exists
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -15,7 +13,6 @@ const DashboardLayout = ({ children }) => {
     }
   }, []);
 
-  // Toggle the dark mode and save the choice to local storage
   const toggleDarkMode = () => {
     if (darkMode) {
       document.documentElement.classList.remove('dark');
@@ -31,7 +28,6 @@ const DashboardLayout = ({ children }) => {
     <div className="flex min-h-screen bg-gray-100 dark:bg-gray-900">
       <Sidebar />
       <main className="flex-1 p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg relative">
-        {/* Theme Toggle Button */}
         <button
           onClick={toggleDarkMode}
           className="absolute bottom-4 right-4 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-yellow-500"

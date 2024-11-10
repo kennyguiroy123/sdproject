@@ -1,4 +1,3 @@
-// TaskItem.js
 import React from 'react';
 
 const TaskItem = ({ task, onEdit, onDelete, onSelect }) => {

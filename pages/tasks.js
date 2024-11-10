@@ -1,4 +1,3 @@
-// TaskPage.js
 import React, { useState, useEffect } from 'react';
 import Modal from '../components/modals';
 import TaskList from '../components/taskList';
@@ -119,6 +118,11 @@ const TaskPage = () => {
         },
         body: JSON.stringify(taskData),
       });
+
+      if (!response.ok) {
+        console.error('Failed to update task');
+        return;
+      }
   
     } else {
       // Create a new task (POST request)
@@ -129,6 +133,11 @@ const TaskPage = () => {
         },
         body: JSON.stringify(taskData),
       });
+
+      if (!response.ok) {
+        console.error('Failed to create task');
+        return;
+      }
   
     }
     fetchTasks();
@@ -156,7 +165,7 @@ const TaskPage = () => {
   return (
     <DashboardLayout>
       <div className="flex gap-6">
-        {/* Left Column (Task List and Filters) */}
+        {/* Task List and Filters */}
         <div className="w-2/3 p-6 bg-white rounded-lg shadow-lg">
           <h2 className="text-xl font-semibold mb-6">Task List</h2>
 
@@ -184,17 +193,6 @@ const TaskPage = () => {
                 Add Task
               </button>
           </div>
-
-            <div className="mt-4">
-              
-            </div>
-          </div>
-
-          {/* Filters */}
-          
-
-          <div className="mb-4">
-            
           </div>
 
           {/* Task List */}
@@ -215,7 +213,7 @@ const TaskPage = () => {
           />
         </div>
 
-        {/* Right Column (Task Details) */}
+        {/* Task Details */}
         <div className="w-1/3 p-6 bg-gray-50 rounded-lg shadow-lg">
           {taskDetails ? (
             <div>

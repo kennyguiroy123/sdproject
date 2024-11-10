@@ -9,7 +9,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      {!hideSidebarPages.includes(router.pathname) && <Sidebar />} {/* Only show Sidebar for other pages */}
+      {!hideSidebarPages.includes(router.pathname) && <Sidebar />}
       <div className="flex-1">
         <MobileNavBar />
         <main>{children}</main>

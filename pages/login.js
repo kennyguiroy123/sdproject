@@ -32,9 +32,9 @@ export default function LoginPage() {
       // Set the token in an HttpOnly cookie
       const cookie = serialize('token', token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production', // Only send cookies over HTTPS in production
+        secure: process.env.NODE_ENV === 'production', 
         maxAge: 60 * 60 * 24,  //1D
-        path: '/', // The cookie is available across the entire site
+        path: '/', 
       });
   
       // Set the cookie in the response headers
